@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#173f2b">
+<title>Prachiti Gift Creation — Handmade With Love</title>
+<meta name="description" content="Prachiti Gift Creation — handmade keychains, hairclips and custom gifts.">
+<style>
+:root{--g:#173f2b;--g2:#2b6546;--p:#d86f7c;--cream:#fffaf5;--soft:#f5eee7;--ink:#16251d;--muted:#68736d;--line:#e9ddd2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+a{text-decoration:none;color:inherit} button{font:inherit}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:#fffaf5e8;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1180px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:23px;font-weight:700;letter-spacing:3px;color:var(--g)} .logo b{color:var(--p)}
+.links{display:flex;gap:26px;font:700 13px Arial,sans-serif;color:#435149} .links a:hover{color:var(--p)}
+.hero{max-width:1180px;margin:auto;min-height:100vh;padding:118px 22px 70px;display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.kicker{font:700 12px Arial,sans-serif;letter-spacing:4px;text-transform:uppercase;color:var(--p)}
+h1{font-size:clamp(54px,8vw,96px);line-height:.9;color:var(--g);margin:18px 0}
+.hero h1 span{display:block;font-size:.48em;letter-spacing:5px;color:var(--p);line-height:1.4;margin-top:10px}
+.hero p{max-width:570px;font:17px/1.75 Arial,sans-serif;color:var(--muted);margin:22px 0 28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:999px;border:1px solid var(--g);font:700 14px Arial,sans-serif;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px #173f2b20}
+.primary{background:var(--g);color:#fff}
+.hero-frame{border:8px solid #fff;border-radius:32px;overflow:hidden;box-shadow:0 25px 70px #4d3b2b25;position:relative}
+.hero-frame img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.hero-label{position:absolute;left:20px;bottom:20px;background:white;border-radius:999px;padding:11px 16px;color:var(--g);font-weight:bold;box-shadow:0 8px 25px #0002}
+section{padding:92px 22px} .soft{background:var(--soft)} .inner{max-width:1120px;margin:auto}
+.heading{text-align:center;margin-bottom:44px} .heading h2{font-size:clamp(36px,5vw,54px);color:var(--g);margin-top:8px}
+.heading p{max-width:650px;margin:12px auto;font:15px/1.7 Arial,sans-serif;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product-card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 10px 35px #4d3b2b10;transition:.3s}
+.product-card:hover{transform:translateY(-7px);box-shadow:0 18px 45px #4d3b2b20}
+.photo-btn{border:0;width:100%;height:280px;padding:0;background:#eee;display:block;position:relative;cursor:pointer;overflow:hidden}
+.photo-btn img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s} .product-card:hover .photo-btn img{transform:scale(1.04)}
+.zoom{position:absolute;right:13px;top:13px;background:#fffdd;border-radius:50%;width:38px;height:38px;display:grid;place-items:center;background:#fff;color:var(--g);box-shadow:0 5px 16px #0002;font:bold 18px Arial}
+.product-info{padding:21px} .pill{font:700 10px Arial,sans-serif;letter-spacing:2px;color:var(--p)}
+.product-info h3{font-size:24px;color:var(--g);margin:6px 0}
+.product-info p{font:14px/1.6 Arial,sans-serif;color:var(--muted);min-height:67px}
+.product-bottom{margin-top:15px;padding-top:13px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between}
+.price-note{font:700 12px Arial,sans-serif;color:#7a817d} .mini-order{font:700 13px Arial,sans-serif;color:var(--g)}
+.custom{background:var(--g);color:#fff;text-align:center} .custom h2{color:#fff}
+.custom p{max-width:660px;margin:12px auto 25px;color:#dce8df;font:15px/1.7 Arial,sans-serif}
+.custom .primary{background:#fff;color:var(--g);border-color:#fff}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feature{text-align:center;padding:28px 20px;border:1px solid var(--line);border-radius:20px;background:#fff}
+.ico{font-size:30px;margin-bottom:7px} .feature h3{color:var(--g);font-size:20px;margin-bottom:6px}
+.feature p{font:13px/1.6 Arial,sans-serif;color:var(--muted)}
+.contact-box{max-width:850px;margin:auto;padding:45px;text-align:center;border:1px solid var(--line);border-radius:28px;background:linear-gradient(135deg,#fff,#f7efe8)}
+.phone{font-size:clamp(30px,5vw,48px);font-weight:bold;color:var(--g);margin:10px 0}
+footer{background:#102d1f;color:#dce8df;text-align:center;padding:34px 20px;font:13px Arial,sans-serif} footer strong{font:700 21px Georgia,serif;color:#fff}
+.sticky-wa{position:fixed;right:18px;bottom:18px;z-index:45;background:#1fa463;color:#fff;border-radius:999px;padding:14px 19px;font:700 14px Arial,sans-serif;box-shadow:0 12px 30px #0003}
+.lightbox{position:fixed;inset:0;background:#000b;z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.lightbox.show{display:flex} .lightbox img{max-width:94vw;max-height:88vh;object-fit:contain;border-radius:15px;box-shadow:0 20px 70px #0008}
+.close{position:fixed;right:18px;top:15px;width:45px;height:45px;border:0;border-radius:50%;background:#fff;color:#173f2b;font-size:28px;cursor:pointer}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:30px}.grid{grid-template-columns:1fr 1fr}.features{grid-template-columns:1fr}.links{display:none}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}section{padding:70px 16px}.hero{padding-left:16px;padding-right:16px}.photo-btn{height:300px}.product-info p{min-height:auto}.sticky-wa{left:16px;right:16px;text-align:center}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-in">
+<a class="logo" href="#home">Prachiti <b>♥</b></a>
+<div class="links"><a href="#home">Home</a><a href="#products">Products</a><a href="#custom">Custom Orders</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<main id="home">
+<section class="hero">
+<div>
+<div class="kicker">Handmade • Personal • Beautiful</div>
+<h1>Gift<br>Creation <span>Made With Love</span></h1>
+<p>Beautiful, cute and customized handmade creations crafted from premium pipe cleaners. Pick a design, choose your colours, or share your own idea.</p>
+<div class="actions">
+<a class="btn primary" href="https://wa.me/917506834231?text=Hi%20Prachiti%20Gift%20Creation!%20I%20want%20to%20place%20an%20order." target="_blank">💬 Order on WhatsApp</a>
+<a class="btn" href="#products">Explore Collection</a>
+</div>
+</div>
+<div class="hero-frame"><img src="images/product-1.jpg" alt="Prachiti flower keychains"><div class="hero-label">♥ Handmade just for you</div></div>
+</section>
+
+<section class="soft" id="products">
+<div class="inner">
+<div class="heading"><div class="kicker">Our Products</div><h2>Little Gifts, Big Smiles</h2><p>Real product photos from Prachiti. Tap any photo to see it bigger.</p></div>
+<div class="grid"><article class="product-card">
+      <button class="photo-btn" onclick="openLightbox('images/product-1.jpg','Flower Keychain')">
+        <img src="images/product-1.jpg" alt="Flower Keychain" loading="lazy"><span class="zoom">↗</span>
+      </button>
+      <div class="product-info">
+        <span class="pill">HANDMADE</span><h3>Flower Keychain</h3>
+        <p>Colourful handmade flower keychains. Personalise colours and details to make it yours.</p>
+        <div class="product-bottom">
+          <a class="mini-order" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20want%20to%20order%20Flower%20Keychain." target="_blank">Order →</a>
+        </div>
+      </div>
+    </article>
+<article class="product-card">
+      <button class="photo-btn" onclick="openLightbox('images/product-2.jpg','Initial Keychains')">
+        <img src="images/product-2.jpg" alt="Initial Keychains" loading="lazy"><span class="zoom">↗</span>
+      </button>
+      <div class="product-info">
+        <span class="pill">HANDMADE</span><h3>Initial Keychains</h3>
+        <p>Personalized letter keychains with cute bows. Personalise colours and details to make it yours.</p>
+        <div class="product-bottom">
+          <a class="mini-order" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20want%20to%20order%20Initial%20Keychains." target="_blank">Order →</a>
+        </div>
+      </div>
+    </article>
+<article class="product-card">
+      <button class="photo-btn" onclick="openLightbox('images/product-3.jpg','Flower Hairclips')">
+        <img src="images/product-3.jpg" alt="Flower Hairclips" loading="lazy"><span class="zoom">↗</span>
+      </button>
+      <div class="product-info">
+        <span class="pill">HANDMADE</span><h3>Flower Hairclips</h3>
+        <p>Handmade flower hairclips for everyday style. Personalise colours and details to make it yours.</p>
+        <div class="product-bottom">
+          <a class="mini-order" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20want%20to%20order%20Flower%20Hairclips." target="_blank">Order →</a>
+        </div>
+      </div>
+    </article>
+<article class="product-card">
+      <button class="photo-btn" onclick="openLightbox('images/product-4.jpg','Bow Hairclips')">
+        <img src="images/product-4.jpg" alt="Bow Hairclips" loading="lazy"><span class="zoom">↗</span>
+      </button>
+      <div class="product-info">
+        <span class="pill">HANDMADE</span><h3>Bow Hairclips</h3>
+        <p>Cute handmade bow hairclips. Personalise colours and details to make it yours.</p>
+        <div class="product-bottom">
+          <a class="mini-order" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20want%20to%20order%20Bow%20Hairclips." target="_blank">Order →</a>
+        </div>
+      </div>
+    </article>
+<article class="product-card">
+      <button class="photo-btn" onclick="openLightbox('images/product-5.jpg','Sunflower Keychains')">
+        <img src="images/product-5.jpg" alt="Sunflower Keychains" loading="lazy"><span class="zoom">↗</span>
+      </button>
+      <div class="product-info">
+        <span class="pill">HANDMADE</span><h3>Sunflower Keychains</h3>
+        <p>Bright handmade sunflower keychains. Personalise colours and details to make it yours.</p>
+        <div class="product-bottom">
+          <a class="mini-order" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20want%20to%20order%20Sunflower%20Keychains." target="_blank">Order →</a>
+        </div>
+      </div>
+    </article>
+<article class="product-card">
+      <button class="photo-btn" onclick="openLightbox('images/product-6.jpg','Custom Initials')">
+        <img src="images/product-6.jpg" alt="Custom Initials" loading="lazy"><span class="zoom">↗</span>
+      </button>
+      <div class="product-info">
+        <span class="pill">HANDMADE</span><h3>Custom Initials</h3>
+        <p>Custom letter keychains made to order. Personalise colours and details to make it yours.</p>
+        <div class="product-bottom">
+          <a class="mini-order" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20want%20to%20order%20Custom%20Initials." target="_blank">Order →</a>
+        </div>
+      </div>
+    </article>
+<article class="product-card">
+      <button class="photo-btn" onclick="openLightbox('images/hibiscus-flower.jpg','Hibiscus Flower')">
+        <img src="images/hibiscus-flower.jpg" alt="Hibiscus Flower" loading="lazy"><span class="zoom">↗</span>
+      </button>
+      <div class="product-info">
+        <span class="pill">HANDMADE</span><h3>Hibiscus Flower</h3>
+        <p>Beautiful handmade hibiscus flower crafted with premium pipe cleaners.</p>
+        <div class="product-bottom"><a class="mini-order" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20want%20to%20order%20Hibiscus%20Flower." target="_blank">Order →</a></div>
+      </div>
+    </article>
+<article class="product-card">
+      <button class="photo-btn" onclick="openLightbox('images/red-flower-toran.jpg','Red Flower Toran')">
+        <img src="images/red-flower-toran.jpg" alt="Red Flower Toran" loading="lazy"><span class="zoom">↗</span>
+      </button>
+      <div class="product-info">
+        <span class="pill">HANDMADE</span><h3>Red Flower Toran</h3>
+        <p>Elegant red handmade flower toran for festive and home décor.</p>
+        <div class="product-bottom"><a class="mini-order" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20want%20to%20order%20Red%20Flower%20Toran." target="_blank">Order →</a></div>
+      </div>
+    </article>
+<article class="product-card">
+      <button class="photo-btn" onclick="openLightbox('images/keychain-making-kit.png','Keychain Making Kit')">
+        <img src="images/keychain-making-kit.png" alt="Keychain Making Kit" loading="lazy"><span class="zoom">↗</span>
+      </button>
+      <div class="product-info">
+        <span class="pill">DIY KIT</span><h3>Keychain Making Kit</h3>
+        <p>A colourful DIY kit with pipe cleaners, keyrings and everything needed to create cute keychains.</p>
+        <div class="product-bottom"><a class="mini-order" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20want%20to%20order%20Keychain%20Making%20Kit." target="_blank">Order →</a></div>
+      </div>
+    </article>
+<article class="product-card">
+      <button class="photo-btn" onclick="openLightbox('images/sunflower-kanthi.jpg','Sunflower Kanthi')">
+        <img src="images/sunflower-kanthi.jpg" alt="Sunflower Kanthi" loading="lazy"><span class="zoom">↗</span>
+      </button>
+      <div class="product-info">
+        <span class="pill">HANDMADE</span><h3>Sunflower Kanthi</h3>
+        <p>Bright handmade sunflower kanthi with delicate ribbon detailing.</p>
+        <div class="product-bottom"><a class="mini-order" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20want%20to%20order%20Sunflower%20Kanthi." target="_blank">Order →</a></div>
+      </div>
+    </article>
+<article class="product-card">
+      <button class="photo-btn" onclick="openLightbox('images/gorai-sathi-veni.jpg','Gorai Sathi Veni')">
+        <img src="images/gorai-sathi-veni.jpg" alt="Gorai Sathi Veni" loading="lazy"><span class="zoom">↗</span>
+      </button>
+      <div class="product-info">
+        <span class="pill">HANDMADE</span><h3>Gorai Sathi Veni</h3>
+        <p>Pretty handmade floral veni with pink flowers and green ribbon ties.</p>
+        <div class="product-bottom"><a class="mini-order" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20want%20to%20order%20Gorai%20Sathi%20Veni." target="_blank">Order →</a></div>
+      </div>
+    </article>
+<article class="product-card">
+      <button class="photo-btn" onclick="openLightbox('images/sonchafa-kanthi.jpg','Sonchafa Kanthi')">
+        <img src="images/sonchafa-kanthi.jpg" alt="Sonchafa Kanthi" loading="lazy"><span class="zoom">↗</span>
+      </button>
+      <div class="product-info">
+        <span class="pill">HANDMADE</span><h3>Sonchafa Kanthi</h3>
+        <p>Handmade yellow Sonchafa flower kanthi with pearl detailing.</p>
+        <div class="product-bottom"><a class="mini-order" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20want%20to%20order%20Sonchafa%20Kanthi." target="_blank">Order →</a></div>
+      </div>
+    </article>
+<article class="product-card">
+      <button class="photo-btn" onclick="openLightbox('images/sonchafa-flower-kanthi.jpg','Sonchafa Flower Kanthi')">
+        <img src="images/sonchafa-flower-kanthi.jpg" alt="Sonchafa Flower Kanthi" loading="lazy"><span class="zoom">↗</span>
+      </button>
+      <div class="product-info">
+        <span class="pill">HANDMADE</span><h3>Sonchafa Flower Kanthi</h3>
+        <p>Traditional handmade Sonchafa flower design with pearl accents.</p>
+        <div class="product-bottom"><a class="mini-order" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20want%20to%20order%20Sonchafa%20Flower%20Kanthi." target="_blank">Order →</a></div>
+      </div>
+    </article></div>
+</div>
+</section>
+
+<section class="custom" id="custom">
+<div class="inner">
+<div class="heading"><div class="kicker">Custom Made</div><h2>Your Idea. Our Craft.</h2><p>Want a special colour, flower, letter or design? Tell us what you imagine and we'll create it for you.</p></div>
+<a class="btn primary" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20have%20a%20custom%20gift%20idea." target="_blank">✨ Discuss a Custom Order</a>
+</div>
+</section>
+
+<section>
+<div class="inner">
+<div class="heading"><div class="kicker">Why Prachiti</div><h2>Made For Your Moments</h2></div>
+<div class="features">
+<div class="feature"><div class="ico">♥</div><h3>Handmade With Love</h3><p>Every piece is carefully crafted with attention to the little details.</p></div>
+<div class="feature"><div class="ico">🎁</div><h3>Perfect For Gifting</h3><p>Cute creations for birthdays, celebrations and thoughtful surprises.</p></div>
+<div class="feature"><div class="ico">✦</div><h3>Custom Made</h3><p>Choose colours, initials and designs to make your gift personal.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="contact-box">
+<div class="kicker">Contact Us</div>
+<h2 style="font-size:40px;color:var(--g);margin:8px 0">Let's Make Something Special</h2>
+<div class="phone">7506834231</div>
+<p style="font:14px Arial,sans-serif;color:var(--muted);margin-bottom:22px">Direct message on WhatsApp for orders & inquiries.</p>
+<a class="btn primary" href="https://wa.me/917506834231?text=Hi%20Prachiti%20Gift%20Creation!%20I%20would%20like%20to%20know%20more%20about%20your%20products." target="_blank">💬 Chat on WhatsApp</a>
+</div>
+</section>
+</main>
+
+<a class="sticky-wa" href="https://wa.me/917506834231?text=Hi%20Prachiti!%20I%20want%20to%20place%20an%20order." target="_blank">💬 WhatsApp Order</a>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<button class="close" onclick="closeLightbox();event.stopPropagation()">×</button>
+<img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+</div>
+<script>
+function openLightbox(src, alt) {
+  document.getElementById('lightbox-img').src=src;
+  document.getElementById('lightbox-img').alt=alt;
+  document.getElementById('lightbox').classList.add('show');
+}
+function closeLightbox() { document.getElementById('lightbox').classList.remove('show'); }
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+</script>
+<footer><strong>Prachiti Gift Creation</strong><br>Handmade with love, just for you ♥</footer>
+</body>
+</html>

@@ -12,12 +12,13 @@ import {
 
 // 🔥 Firebase config yaha baad me dalenge
 const firebaseConfig = {
-  apiKey: "PASTE_YOUR_FIREBASE_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.firebasestorage.app",
-  messagingSenderId: "YOUR_SENDER_ID",
+  apiKey: "YOUR_API_KEY",
+  authDomain: "prachiti-gift-creation.firebaseapp.com",
+  projectId: "prachiti-gift-creation",
+  storageBucket: "prachiti-gift-creation.firebasestorage.app",
+  messagingSenderId: "919921027125",
   appId: "YOUR_APP_ID"
+};
 };
 
 // ⭐ Google Review link baad me yaha dalenge

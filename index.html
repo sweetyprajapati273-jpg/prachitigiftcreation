@@ -121,7 +121,8 @@ footer{background:#102d1f;color:#dce8df;text-align:center;padding:34px 20px;font
 </div></nav>
 <div class="search-box" id="searchBox">
   <input type="text" id="searchInput" placeholder="Search products..." oninput="searchProducts()">
-  <button onclick="closeSearch()">×</button>
+  <button onclick="searchSite()">🔍</button>
+<button onclick="closeSearch()">×</button>
 </div>
       
 <main id="home">
@@ -370,5 +371,30 @@ function closeLightbox() { document.getElementById('lightbox').classList.remove(
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
 </script>
 <footer><strong>Prachiti Gift Creation</strong><br>Handmade with love, just for you ♥</footer>
+      <script>
+function openSearch(){
+  document.getElementById("searchBox").classList.add("show");
+  document.getElementById("searchInput").focus();
+}
+
+function closeSearch(){
+  document.getElementById("searchBox").classList.remove("show");
+}
+
+function searchSite(){
+  const query = document.getElementById("searchInput").value.trim();
+
+  if(query === ""){
+    alert("Kuch search karo 😊");
+    return;
+  }
+
+  const found = window.find(query);
+
+  if(!found){
+    alert("Nahi mila 😅");
+  }
+}
+      </script>
 </body>
 </html>

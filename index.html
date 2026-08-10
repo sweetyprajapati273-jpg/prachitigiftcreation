@@ -68,6 +68,45 @@ footer{background:#102d1f;color:#dce8df;text-align:center;padding:34px 20px;font
   font-size:18px;
   color:var(--g);
       }
+      .search-box{
+  position:fixed;
+  top:70px;
+  right:20px;
+  z-index:60;
+  background:#fff;
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius:15px;
+  box-shadow:0 10px 30px #0002;
+  display:none;
+}
+
+.search-box.show{
+  display:flex;
+  gap:8px;
+}
+
+.search-box input{
+  width:220px;
+  padding:11px 13px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  outline:none;
+}
+
+.search-box button{
+  border:0;
+  background:var(--soft);
+  border-radius:10px;
+  width:40px;
+  cursor:pointer;
+}
+
+@media(max-width:850px){
+  .links{display:flex;gap:12px}
+  .links a{display:none}
+  .search-btn{display:block}
+}
 </style>
 </head>
 <body>
@@ -80,6 +119,10 @@ footer{background:#102d1f;color:#dce8df;text-align:center;padding:34px 20px;font
 <a href="#contact">Contact</a>
 <button class="search-btn" onclick="openSearch()">🔍</button>
 </div></nav>
+<div class="search-box" id="searchBox">
+  <input type="text" id="searchInput" placeholder="Search products..." oninput="searchProducts()">
+  <button onclick="closeSearch()">×</button>
+</div>
       
 <main id="home">
 <section class="hero">

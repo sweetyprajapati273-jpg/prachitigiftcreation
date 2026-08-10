@@ -61,14 +61,26 @@ footer{background:#102d1f;color:#dce8df;text-align:center;padding:34px 20px;font
       .review-card{text-align:center}
 .stars{color:#e0a400;font:20px Arial,sans-serif;letter-spacing:3px;margin-bottom:8px}
 .review-card strong{font:700 13px Arial,sans-serif;color:var(--g)}
+      .search-btn{
+  border:0;
+  background:none;
+  cursor:pointer;
+  font-size:18px;
+  color:var(--g);
+      }
 </style>
 </head>
 <body>
 <nav class="nav"><div class="nav-in">
 <a class="logo" href="#home">Prachiti <b>♥</b></a>
-<div class="links"><a href="#home">Home</a><a href="#products">Products</a><a href="#custom">Custom Orders</a><a href="#contact">Contact</a></div>
+<div class="links">
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#custom">Custom Orders</a>
+<a href="#contact">Contact</a>
+<button class="search-btn" onclick="openSearch()">🔍</button>
 </div></nav>
-
+      
 <main id="home">
 <section class="hero">
 <div>

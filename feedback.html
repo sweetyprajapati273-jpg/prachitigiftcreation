@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#173f2b">
+<title>Feedback — Prachiti Gift Creation</title>
+<meta name="description" content="Share your feedback with Prachiti Gift Creation.">
+<style>
+:root{--g:#173f2b;--g2:#2b6546;--p:#d86f7c;--cream:#fffaf5;--soft:#f5eee7;--ink:#16251d;--muted:#68736d;--line:#e9ddd2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+a{text-decoration:none;color:inherit}
+.nav{background:#fffaf5ee;border-bottom:1px solid var(--line);padding:14px 22px}
+.nav-in{max-width:900px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:23px;font-weight:700;letter-spacing:3px;color:var(--g)}
+.logo b{color:var(--p)}
+.back{font:700 13px Arial,sans-serif;color:var(--g)}
+.wrap{max-width:720px;margin:0 auto;padding:75px 20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:42px;box-shadow:0 18px 55px #4d3b2b12}
+.kicker{font:700 12px Arial,sans-serif;letter-spacing:4px;text-transform:uppercase;color:var(--p);text-align:center}
+h1{text-align:center;font-size:clamp(40px,7vw,62px);line-height:1;color:var(--g);margin:12px 0}
+.intro{text-align:center;font:15px/1.7 Arial,sans-serif;color:var(--muted);margin:0 auto 30px;max-width:560px}
+label{display:block;font:700 13px Arial,sans-serif;color:var(--g);margin:18px 0 7px}
+input,textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:13px 14px;font:15px Arial,sans-serif;outline:none;background:#fff}
+input:focus,textarea:focus{border-color:var(--g)}
+textarea{min-height:140px;resize:vertical}
+.rating{display:flex;gap:8px;flex-wrap:wrap}
+.rating input{display:none}
+.rating label{margin:0;padding:10px 14px;border:1px solid var(--line);border-radius:999px;cursor:pointer;font-size:18px}
+.rating label:hover{background:var(--soft)}
+.actions{margin-top:25px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{flex:1;min-width:180px;border:1px solid var(--g);border-radius:999px;padding:14px 20px;text-align:center;font:700 14px Arial,sans-serif;cursor:pointer}
+.primary{background:var(--g);color:#fff}
+.note{text-align:center;font:12px/1.6 Arial,sans-serif;color:var(--muted);margin-top:16px}
+footer{text-align:center;background:#102d1f;color:#dce8df;padding:25px 20px;font:13px Arial,sans-serif;margin-top:30px}
+footer strong{font:700 19px Georgia,serif;color:#fff}
+@media(max-width:560px){.card{padding:28px 20px}.wrap{padding-top:45px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-in">
+    <a class="logo" href="index.html">Prachiti <b>♥</b></a>
+    <a class="back" href="index.html">← Back to Website</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="card">
+    <div class="kicker">Customer Love</div>
+    <h1>Share Your Feedback</h1>
+    <p class="intro">Your feedback means a lot to Prachiti Gift Creation. Tell us about your experience, product quality, or anything we can improve.</p>
+
+    <form id="feedbackForm">
+      <label for="name">Your Name</label>
+      <input id="name" name="name" type="text" placeholder="Enter your name" required>
+
+      <label>Rating</label>
+      <div class="rating">
+        <input id="r5" name="rating" type="radio" value="5 Stars" checked>
+        <label for="r5">★★★★★</label>
+        <input id="r4" name="rating" type="radio" value="4 Stars">
+        <label for="r4">★★★★☆</label>
+        <input id="r3" name="rating" type="radio" value="3 Stars">
+        <label for="r3">★★★☆☆</label>
+      </div>
+
+      <label for="message">Your Feedback</label>
+      <textarea id="message" name="message" placeholder="Write your feedback here..." required></textarea>
+
+      <div class="actions">
+        <button class="btn primary" type="submit">💬 Send Feedback on WhatsApp</button>
+        <a class="btn" href="index.html">Back to Home</a>
+      </div>
+      <p class="note">When you submit, WhatsApp will open with your feedback ready to send.</p>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <strong>Prachiti Gift Creation</strong><br>
+  Handmade with love, just for you ♥
+</footer>
+
+<script>
+document.getElementById("feedbackForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const name = document.getElementById("name").value.trim();
+  const rating = document.querySelector('input[name="rating"]:checked').value;
+  const message = document.getElementById("message").value.trim();
+
+  const text =
+    "Hi Prachiti Gift Creation!%0A%0A" +
+    "Customer Feedback%0A" +
+    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Rating: " + encodeURIComponent(rating) + "%0A" +
+    "Feedback: " + encodeURIComponent(message);
+
+  window.open("https://wa.me/917506834231?text=" + text, "_blank");
+});
+</script>
+</body>
+</html>
